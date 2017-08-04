@@ -2,7 +2,7 @@ import "jquery"
 import ReactDOM from "react-dom";
 import React from "react";
 import { Router, Route, Switch } from "react-router-dom"
-import {createBrowserHistory} from 'history';
+import {history} from './history';
 import { Provider} from "react-redux";
 import store from "./store"
 import {NavBar} from "./components/navbar"
@@ -10,7 +10,6 @@ import {About} from "./components/about/about"
 import {Login} from "./components/Login/login"
 import Home from "./components/Home/home"
 
-const history = createBrowserHistory();
 ReactDOM.render(
     <Provider store={store}>
           <Router history={history}>

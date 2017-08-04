@@ -1,3 +1,4 @@
+import {history} from './../history'
 const nameInitialStata = {
     user:{
         name:"",
@@ -16,6 +17,7 @@ const NameReducer = (state = nameInitialStata,action) =>{
                 user: {...state.user,name:action.payload.name,age:action.payload.age},
                 users:[...state.users,{name:action.payload.name,age:action.payload.age}]
             }
+            history.push('/about');
             break;
         case "SET_CURRENT_NAME":
             state = {
