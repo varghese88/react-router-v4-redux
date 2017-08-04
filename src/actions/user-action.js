@@ -1,11 +1,11 @@
- 
- import axios from "axios";
+import axios from "axios";
+import {history} from './../history';
 
- export const setUser = (user)=>{
-    return {
-        type:'SET_USER',
-        payload:user
-    };
+export const setUser = (user)=>{
+    return (dispatch)=>{
+        dispatch({type:'SET_USER', payload:user});
+        history.push('/about');
+    }
 }
 
 export const getUsers = ()=>{
