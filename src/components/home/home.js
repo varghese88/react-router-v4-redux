@@ -17,7 +17,6 @@ class Home extends React.Component{
     }
     render(){
         const userDetails = this.props.userDetails;
-        console.log(this.props);
         let list = userDetails.posts.map((post,index)=>{
             return (
                 <UserList key={index} post={post} />
