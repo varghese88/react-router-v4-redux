@@ -1,6 +1,5 @@
 import axios from "axios";
 import {history} from './../history';
-
 export const setUser = (user)=>{
     return (dispatch)=>{
         dispatch({type:'SET_USER', payload:user});
