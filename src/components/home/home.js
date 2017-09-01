@@ -1,4 +1,5 @@
 import React from "react";
+import { TenderButton } from "./../button/tender-button"
 import {UserList} from "./user-list";
 import {setUser,setCurrentName,setCurrentAge,getUsers} from "../../actions/user-action";
 import {connect} from "react-redux";
@@ -25,6 +26,7 @@ class Home extends React.Component{
 
         return (
             <div className="container">
+                <TenderButton />
                 <div className="form-group">
                     <label>Name:</label>
                     <input value = {userDetails.user.name} onChange={this.onChangeName.bind(this)} type="text" className="form-control" id="usr" />
